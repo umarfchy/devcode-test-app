@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.listen(5000, () => "it started");
+app.listen(process.env.PORT || 5000, () => "it started");
 
 async function idGenerator() {
   const url = "https://demo-api.gii.cloud/api/oauth/sign";
